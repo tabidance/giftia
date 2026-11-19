@@ -62,4 +62,5 @@ jobs:
           app-name: 'gen13-app-step3-1-5202-fe'
           slot-name: 'Production'
           package: release.zip           # ⑤zip をそのまま送る
+          clean: true                    # ⑥送る前に wwwroot を空にする（古い .next のキャッシュを残さない）
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F2B73191EA84451D991D1036770837C0 }}
